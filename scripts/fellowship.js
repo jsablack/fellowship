@@ -29,19 +29,20 @@ function makeMiddleEarth() {
   for(i = 0; i < lands.length; i++){
       //add each genres to the list
       $('#middle-earth').append('<article id="'+lands[i]+'">' + '<h1>' + lands[i] + '</h1>' + '</article>');
-  }
-}
+  };
+};
 
 makeMiddleEarth();
 
 function makeHobbits(){
   // your answers here
-  $('article').first().append('<ul>' + '</ul>');
+  var HobbitList = '<ul id="hobbitUlist"></ul>';
+  $('article:first-child').append(HobbitList);
   for(i = 0; i < hobbits.length; i++){
     $('ul').append('<li>' + hobbits[i] + '</li>');
     $('li').prop('class', 'hobbit');
-  }
-}
+  };
+};
 
 makeHobbits();
 
@@ -49,33 +50,37 @@ function keepItSecretKeepItSafe(){
   // your answers here
   var div = $('div').prop('id', 'the-ring').prop('class', 'magic-imbued-jewelry');
   // var frodo = $('.hobbits[0]');
-  $(".magic-imbued-jewelry").detach().appendTo($('li').first())
+  $(".magic-imbued-jewelry").detach().appendTo($('#hobbitUlist > li:first-child'));
   // $('.hobbits').first().('#magic-imbued-jewelry');
-}
+};
 
 keepItSecretKeepItSafe();
 
 function makeBuddies(){
   // your answers here
-  $('#Rivendell').append('<aside></aside>')
-  $('aside').append('<ul>' + '</ul>')
+  $('#Rivendell').append('<aside id="buddyList"></aside>')
+  $('aside').append("<ul>" + '</ul>')
   for(i = 0; i < buddies.length; i++){
-    $('aside').append('<li>' + buddies[i] + '</li>');
-  }
+    $('#buddyList > ul').append('<li = buddies>' + buddies[i] + '</li>');
+  };
   // $('li').prop('class', 'buddy');
-}
+};
 
 makeBuddies();
 
 function beautifulStranger(){
   // your answers here
-  var strider = $("li:contains('Strider')")
-}
+  // var strider = $("li:contains('Strider')")
+  // $(strider).text('Aragon')
+  // $('buddyList > ul > li:nth-child(4)').html('Aragorn');
+};
 
 beautifulStranger();
 
 function leaveTheShire(){
   // your answers here
+    // $("#hobbitList").detach().appendTo($('#buddyList');
+
 }
 
 leaveTheShire();
