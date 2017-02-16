@@ -111,8 +111,8 @@ theBalrog();
 function hornOfGondor() {
   // your answers here
   var Boromir = $('#thefellowship > li:nth-child(5)');
-  alert('The horn of Gondor has been blown!');
-  alert('Boromir\'s been killed by the Uruk-hai!');
+  // alert('The horn of Gondor has been blown!');
+  // alert('Boromir\'s been killed by the Uruk-hai!');
   $(Boromir).remove();
 };
 
@@ -120,18 +120,35 @@ hornOfGondor();
 
 function itsDangerousToGoAlone() {
   // your answers here
-}
+  var Frodo = $('#thefellowship > li:nth-child(5)');
+  var Sam = $('#thefellowship > li:nth-child(6)');
+  var Mordor = $('#middle-earth > article:nth-child(3)');
+  $(Frodo).appendTo(Mordor);
+  $(Sam).appendTo(Mordor);
+  $(Mordor).append('<div id = "mount-doom">' + '</div>')
+};
 
 itsDangerousToGoAlone();
 
 function weWantsIt() {
   // your answers here
-}
+  var Mordor = $('#middle-earth > article:nth-child(3)');
+  $(Mordor).append('<div id = "gollum">' + '</div>');
+  $('#the-ring').detach().appendTo('#gollum');
+  $('#gollum').detach().appendTo('#mount-doom');
+
+};
 
 weWantsIt();
 
 function thereAndBackAgain(){
   // your answers here
-}
+  $('#gollum').remove();
+  $('#the-ring').remove();
+  $('.hobbit').detach().appendTo('#middle-earth > article:nth-child(1)');
+};
 
 thereAndBackAgain();
+
+
+
