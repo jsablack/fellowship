@@ -72,7 +72,7 @@ function beautifulStranger(){
   // your answers here
   // var strider = $("li:contains('Strider')")
   // $(strider).text('Aragon')
-  // $('buddyList > ul > li:nth-child(4)').html('Aragorn');
+  $('#buddyList > ul > li:nth-child(4)').html('Aragorn');
 };
 
 beautifulStranger();
@@ -80,14 +80,23 @@ beautifulStranger();
 function leaveTheShire(){
   // your answers here
     // $("#hobbitList").detach().appendTo($('#buddyList');
-
-}
+        $("#hobbitUlist").detach().appendTo('#middle-earth > article:nth-child(2)');
+};
 
 leaveTheShire();
 
 function forgeTheFellowship() {
   // your answers here
-}
+  $('#Rivendell').append('<div id="thefellowship">' + '</div');
+  for (var i = 0; i < buddies.length; i++){
+    $('#buddyList > ul > li:nth-child(1)').detach().appendTo('#thefellowship');
+    alert(buddies[i] + ' ' + 'has' + ' ' + 'joined' + ' ' + 'your' + ' ' + 'party');
+  };
+  for (var i = 0; i < hobbits.length; i++){
+    $('#hobbitUlist > li:nth-child(1)').detach().appendTo('#thefellowship');
+        alert(hobbits[i] + ' ' + 'has' + ' ' + 'joined' + ' ' + 'your' + ' ' + 'party');
+  };
+};
 
 forgeTheFellowship();
 
