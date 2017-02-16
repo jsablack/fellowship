@@ -90,11 +90,11 @@ function forgeTheFellowship() {
   $('#Rivendell').append('<div id="thefellowship">' + '</div');
   for (var i = 0; i < buddies.length; i++){
     $('#buddyList > ul > li:nth-child(1)').detach().appendTo('#thefellowship');
-    alert(buddies[i] + ' ' + 'has' + ' ' + 'joined' + ' ' + 'your' + ' ' + 'party');
+    // alert(buddies[i] + ' ' + 'has' + ' ' + 'joined' + ' ' + 'your' + ' ' + 'party');
   };
   for (var i = 0; i < hobbits.length; i++){
     $('#hobbitUlist > li:nth-child(1)').detach().appendTo('#thefellowship');
-        alert(hobbits[i] + ' ' + 'has' + ' ' + 'joined' + ' ' + 'your' + ' ' + 'party');
+        // alert(hobbits[i] + ' ' + 'has' + ' ' + 'joined' + ' ' + 'your' + ' ' + 'party');
   };
 };
 
@@ -102,13 +102,19 @@ forgeTheFellowship();
 
 function theBalrog(){
   // your answers here
-}
+  $('#thefellowship > li:nth-child(1)').text('Gandalf the White');
+  $('#thefellowship > li:nth-child(1)').css('background-color', 'white').css('border', '2px solid grey');
+};
 
 theBalrog();
 
 function hornOfGondor() {
   // your answers here
-}
+  var Boromir = $('#thefellowship > li:nth-child(5)');
+  alert('The horn of Gondor has been blown!');
+  alert('Boromir\'s been killed by the Uruk-hai!');
+  $(Boromir).remove();
+};
 
 hornOfGondor();
 
